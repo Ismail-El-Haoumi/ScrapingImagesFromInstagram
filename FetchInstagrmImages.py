@@ -9,7 +9,7 @@ import lxml
 
 
 class App:
-    def __init__(self,username='elhoumi.mks',password='allahoakbar2000',target_username='sarah.zain44',path="C:\\Users\\ismail\\Desktop\\python-test-torrent"):
+    def __init__(self,username='<YourUserName>',password='<YourPassword>',target_username='tomcruise',path="C:\\Users\\ismail\\Desktop\\instagram"):
         self.username=username
         self.password=password
         self.target_username=target_username
@@ -28,8 +28,8 @@ class App:
         self.list=[]
         self.scrroll_down()
         sleep(5)
-       # self.downloading_images()
-        #input("stop for now")
+        #self.downloading_images()
+        input("stop for now")
         sleep(3)
         self.driver.close()
 
@@ -58,7 +58,7 @@ class App:
                     shutil.copyfileobj(response.raw,file)
             except Exception as e:
                 print(e)
-                #print('Could not downoald image number ',index)
+                print('Could not downoald image number ',index)
                 print('image link -->',link)
             print(image['src'])
     def log_in(self):
@@ -74,7 +74,7 @@ class App:
         f=self.driver.find_element_by_xpath('//span[@class="Fy4o8"]')
         f.click()"""
         sleep(3)
-        X="michaeljackson"
+        #X="michaeljackson"
         target_profile_url=self.main_url+'/'+self.target_username
         self.driver.get(target_profile_url)
         sleep(3)
@@ -95,5 +95,5 @@ class App:
                 sleep(1)
         print(num_pub)
 if __name__=="__main__":
-    app=App(target_username="lady.nettie")
+    app=App(target_username="tomcruise")
     #app2= App(target_username="rachel_mypark")
